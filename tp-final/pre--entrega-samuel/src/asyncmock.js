@@ -1,13 +1,13 @@
 const productos = [
-    {id: 1, nombre: "Yerba", precio: 500, img: "./img/yerba.jpg"},
-    {id: 2, nombre: "Fideos", precio: 400, img: "./img/fideos.jpg"}
+    {id: "1", nombre: "Yerba", precio: 500, img: "../img/yerba.jpg", idCat: "2"},
+    {id: "2", nombre: "Fideos", precio: 400, img: "../img/fideos.jpg", idCat: "3"}
 ]
 
 export const getProductos = () => {
     return new Promise( resolve => {
         setTimeout(() => {
             resolve(productos); 
-        }, 2000) 
+        }, 100) 
     })
 }
 
@@ -18,6 +18,19 @@ export const getUnProducto = (id) => {
         setTimeout( () => {
             const productoBuscado = productos.find(item => item.id === id); 
             resolve(productoBuscado);
-        }, 2000)
+        }, 100)
     }) 
+}
+
+//Segunda Pre Entrega: 
+
+//Tenemos que crear una nueva función que retorne toda la categoria de productos: 
+
+export const getProductosPorCategoria = (idCategoria) => {
+    return new Promise(resolve => {
+        setTimeout( () => {
+            const productosCategoria = productos.filter(item => item.idCat === idCategoria);
+            resolve(productosCategoria); 
+        }, 100)
+    })
 }
