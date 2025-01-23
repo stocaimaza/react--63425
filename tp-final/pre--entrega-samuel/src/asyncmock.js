@@ -1,6 +1,6 @@
 const productos = [
-    {id: "1", nombre: "Yerba", precio: 500, img: "../img/yerba.jpg", idCat: "2"},
-    {id: "2", nombre: "Fideos", precio: 400, img: "../img/fideos.jpg", idCat: "3"}
+    {id: "1", nombre: "Yerba", stock: 10, precio: 500, img: "../img/yerba.jpg", idCat: "2"},
+    {id: "2", nombre: "Fideos", stock: 100, precio: 400, img: "../img/fideos.jpg", idCat: "3"}
 ]
 
 export const getProductos = () => {
