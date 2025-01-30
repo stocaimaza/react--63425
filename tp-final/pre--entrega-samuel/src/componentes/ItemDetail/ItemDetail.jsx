@@ -5,14 +5,27 @@ import { useState } from "react";
 //Para navegar al componente "/cart" necesito traer Link: 
 import { Link } from "react-router-dom";
 
+//importamos el CarritoContex: 
+import { CarritoContext } from "../../context/CarritoContext";
+
+//importar el hook useContext: 
+import { useContext } from "react";
+
 const ItemDetail = ({id, nombre, precio, img, stock}) => {
   //Creamos un estado local con la cantidad de productos que agregamos. 
   const [agregarCantidad, setAgregarCantidad] = useState(0); 
 
+  //Cambios para trabajar con Context: 
+  const { agregarAlCarrito } = useContext(CarritoContext); 
+
   //Creamos una función para manejar las cantidades
   const manejadorCantidad = (cantidad) => {
     setAgregarCantidad(cantidad);
-    console.log("Productos agregados: " + cantidad); 
+    //console.log("Productos agregados: " + cantidad); 
+
+    //Ahora voya crear un objeto con el item y la cantidad: 
+    const item = {id, nombre, precio}; 
+    agregarAlCarrito(item, cantidad); 
   }
 
   return (
