@@ -1,0 +1,115 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* App container */
+.app {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* FormularioLibro component styles */
+.libro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.libro-form input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.libro-form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.libro-form button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.libro-form button:hover {
+  background-color: #218838;
+}
+
+.libro-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* LibroLista component styles */
+.listado-libros {
+  list-style: none;
+  padding: 0;
+}
+
+.listado-libros li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.listado-libros li button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.listado-libros li button:first-child {
+  background-color: #007bff;
+}
+
+.listado-libros li button:nth-child(2) {
+  background-color: #dc3545;
+}
+
+.listado-libros li button:hover {
+  background-color: #0056b3;
+}
+
+.listado-libros li button:nth-child(2):hover {
+  background-color: #c82333;
+}
